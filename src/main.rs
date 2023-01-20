@@ -1,7 +1,19 @@
 use rand::Rng;
 use std::cmp::Ordering;
 use std::io;
-use std::io::Write;
+use std::io::prelude::{Write, Read};
+
+fn pause() {
+    let mut stdin = io::stdin();
+    let mut stdout = io::stdout();
+
+    // We want the cursor to stay at the end of the line, so we print without a newline and flush manually.
+    write!(stdout, "Press enter key to continue...").unwrap();
+    stdout.flush().unwrap();
+
+    // Read a single byte and discard
+    let _ = stdin.read(&mut [0u8]).unwrap();
+}
 
 fn main() {
     println!("Guess the number!");
@@ -37,4 +49,6 @@ fn main() {
             }
         }
     }
+
+    pause();
 }

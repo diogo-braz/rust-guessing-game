@@ -1,5 +1,5 @@
 # Guessing Game
-Basic project for learn Rust language.
+Basic project for learning Rust language.
 This exercise is taken from Rust book (chapter 2).
 
 ## Compilation
