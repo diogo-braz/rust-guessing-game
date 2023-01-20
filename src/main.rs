@@ -26,7 +26,10 @@ fn main() {
         match guess.cmp(&number) {
             Ordering::Less => println!("Too small!"),
             Ordering::Greater => println!("Too big!"),
-            Ordering::Equal => println!("Your guess is correct!"),
+            Ordering::Equal => {
+                println!("Your guess is correct!");
+                break;
+            }
         }
     }
 }
