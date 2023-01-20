@@ -1,5 +1,6 @@
 # Guessing Game
 Basic project for learn Rust language.
+This exercise is taken from Rust book (chapter 2).
 
 ## Compilation
 ```bash
