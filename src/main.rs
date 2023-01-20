@@ -1,3 +1,16 @@
+use std::io;
+use std::io::Write;
+
 fn main() {
-    println!("Hello, World!");
+    println!("Guess the number!");
+    print!("Insert your guess: ");
+    io::stdout().flush().unwrap();
+
+    let mut guess = String::new();
+
+    io::stdin()
+        .read_line(&mut guess)
+        .expect("Error in guess input");
+
+    println!("Your guess: {guess}");
 }
