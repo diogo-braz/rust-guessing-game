@@ -1,5 +1,5 @@
-use rand::Rng;
 use std::cmp::Ordering;
+use rand::Rng;
 use std::io;
 use std::io::Write;
 
