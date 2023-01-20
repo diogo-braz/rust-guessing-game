@@ -19,7 +19,13 @@ fn main() {
             .read_line(&mut guess)
             .expect("Error in guess input");
 
-        let guess: u32 = guess.trim().parse().expect("Insert a number!");
+        let guess: u32 = match guess.trim().parse() {
+            Ok(num) => num,
+            Err(_) => {
+                println!("Insert a number!");
+                continue;
+            }
+        };
 
         println!("Your guess: {guess}");
 
